@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <script src="js/index.js" defer></script>
+    </head>
+    <body>
+        <form action="">
+            <p>Qual unidade você quer converter?</p>
+            <!-- Escolha da Unidade -->
+            <div>  
+                <input type="radio" name="nmDe" id="idCelsius1">
+                <label for="idCelsius1">Graus Celsius</label>
+            </div>
+            <div>
+                <input type="radio" name="nmDe" id="idFahrenheit1">
+                <label for="idFahrenheit1">Graus Fahrenheit</label>
+            </div>
+            <div>
+                <input type="radio" name="nmDe" id="idkelvin1">
+                <label for="idkelvin1">kelvin</label>
+            </div>
+            <!-- Campo para digitar o valor para ser convertido --> 
+            <div>
+                <input type="number" id="idTemperatura" placeholder="Temperatura...">
+            </div>
+            <div>
+                <input type="button" value="Converter" id="idBtConverter" >
+            </div>
+            <div id="idDivOut">
+                <output id="idOut1"></output>           
+                <output id="idOut2"></output>
+            </div>
+        </form>
+    </body>
+</html>
