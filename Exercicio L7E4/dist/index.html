@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Java P4L7</title>
+        <script src="js/index.js" defer></script>
+
+        <style>
+            div{
+                margin: 5px;
+                display: block;
+            }
+            .clOut1{
+                height: auto;
+                width: 150px;
+                text-align: center;
+            }
+            .clOut2{
+                height: auto;
+                width: 150px;
+                text-align: center;
+            }
+            input[type= number] {
+                width: 150px;
+            }
+        </style>
+    </head>
+    <body>
+        <!--
+            Crie um programa para armazenar informações meteorológicas.
+
+            1. Crie um vetor para armazenar 30 temperaturas.
+
+            2. Calcular a média das temperaturas.
+
+            3. O usuário pode informar um dia qualquer e o programa deve dizer se 
+                a temperatura desse dia estava acima ou abaixo da média.
+         -->
+        <form action="">
+            <div class="clDiv1">
+                <div>
+                    <input type="number" name="nmTemperatura" id="idTemperatura" placeholder="Temperatura...">
+                </div>
+                <div>
+                    <input type="button" value="Enviar" id="idEnviarTemperatura">
+                    <input type="button" value="Media" id="idCalcularMedia">
+                </div>
+                <div  class="clOut1">
+                    <output id="idOutMedia"></output>
+                </div>
+            </div>
+            <div class="clDiv2">
+                <div>
+                    <input type="number" name="nmDiaInfo" id="idDiaInfo" placeholder="Informe um dia...">
+                </div>
+                <div>
+                    <input type="button" value="Verificar" id="idVerificarDia">
+                </div>
+                <div class="clOut2">
+                    <output id="idOutDiaInfo"></output>
+                </div>
+            </div>
+        </form>
+    </body>
+</html>
