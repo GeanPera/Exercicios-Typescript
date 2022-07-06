@@ -15,18 +15,22 @@ btEnviarTemperatura.onclick = function ():void {
     temperatura.value = "";
 }
 btCalcularMedia.onclick = function ():void {
-      for (var i = 0; i < temperaturasEnviadas.length; i++) {                        
+    media = 0
+    for (var i = 0; i < temperaturasEnviadas.length; i++) {                        
         media+= temperaturasEnviadas[i];
     }
-    media = media / temperaturasEnviadas.length++;
+    console.log(media)
+    media = media / temperaturasEnviadas.length;
     outMedia.value = "A média das temperatura é " + media;
 
-    console.table(temperaturasEnviadas);
 }
 btVerificarDia.onclick = function ():void {
+    console.log(temperaturasEnviadas)
+    console.log(media)
     let diaInformado = document.getElementById("idDiaInfo") as HTMLInputElement;
     let dia: number = parseFloat(diaInformado.value);
     dia--
+    console.log(dia + "-------")
     if (media > temperaturasEnviadas[dia]) {
         outDiaInfo.value = "A temperatura desse dia é " + temperaturasEnviadas[dia]
          + " e está abaixo da media";

@@ -4,23 +4,25 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Java P4L7</title>
+        <title>L7E4</title>
         <script src="js/index.js" defer></script>
 
         <style>
             div{
-                margin: 5px;
+                margin: 10px;
                 display: block;
             }
             .clOut1{
                 height: auto;
                 width: 150px;
                 text-align: center;
+                color: rgb(1, 1, 112)
             }
             .clOut2{
                 height: auto;
                 width: 150px;
                 text-align: center;
+                color: rgb(1, 1, 112)
             }
             input[type= number] {
                 width: 150px;
@@ -41,17 +43,23 @@
         <form action="">
             <div class="clDiv1">
                 <div>
+                    <label for="">Informe quantas temperatura quiser</label>
+                </div>
+                <div>
                     <input type="number" name="nmTemperatura" id="idTemperatura" placeholder="Temperatura...">
                 </div>
                 <div>
-                    <input type="button" value="Enviar" id="idEnviarTemperatura">
-                    <input type="button" value="Media" id="idCalcularMedia">
+                    <input type="button" value="Enviar Temperatura" id="idEnviarTemperatura">
+                    <input type="button" value="Verificar Media" id="idCalcularMedia">
                 </div>
                 <div  class="clOut1">
                     <output id="idOutMedia"></output>
                 </div>
             </div>
             <div class="clDiv2">
+                <div>
+                    <label for="">Pequise a temperatura do dia</label>
+                </div>
                 <div>
                     <input type="number" name="nmDiaInfo" id="idDiaInfo" placeholder="Informe um dia...">
                 </div>

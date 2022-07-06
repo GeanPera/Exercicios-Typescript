@@ -13,17 +13,21 @@ btEnviarTemperatura.onclick = function () {
     temperatura.value = "";
 };
 btCalcularMedia.onclick = function () {
+    media = 0;
     for (var i = 0; i < temperaturasEnviadas.length; i++) {
         media += temperaturasEnviadas[i];
     }
-    media = media / temperaturasEnviadas.length++;
+    console.log(media);
+    media = media / temperaturasEnviadas.length;
     outMedia.value = "A média das temperatura é " + media;
-    console.table(temperaturasEnviadas);
 };
 btVerificarDia.onclick = function () {
+    console.log(temperaturasEnviadas);
+    console.log(media);
     let diaInformado = document.getElementById("idDiaInfo");
     let dia = parseFloat(diaInformado.value);
     dia--;
+    console.log(dia + "-------");
     if (media > temperaturasEnviadas[dia]) {
         outDiaInfo.value = "A temperatura desse dia é " + temperaturasEnviadas[dia]
             + " e está abaixo da media";
