@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>L3E9</title>
+        <script src="js/index.js" defer></script>
+        <style>
+            div{
+                margin: 10px;
+            }
+           .clDivCampoDigitação{
+               display: table-caption;
+           }
+        </style>
+    </head>
+    <body>
+        <form action="">
+            <div>
+            <!-- cabeçalho -->
+                <label>Quer calcular a area de qual forma geometrica</label>
+            </div>
+            <div>
+            <!-- Escolher Círculo -->
+                <input type="radio" name="nmForma" id="idCirculo">
+                <label for="idCirculo">Círculo</label>    
+            </div>
+            <div>
+            <!-- Escolher Retângulo -->
+                <input type="radio" name="nmForma" id="idRetangulo">
+                <label for="idRetangulo">Retângulo</label>
+            </div>
+            <div>
+            <!-- Escolher Triangulo Retângulo -->
+                <input type="radio" name="nmForma" id="idTrianguloRetangulo">
+                <label for="idTrianguloRetangulo">Triangulo Retângulo</label>
+            </div>
+            <div>
+            <!-- Escolher Triangulo Equilátero -->
+                <input type="radio" name="nmForma" id="idTrianguloEquilatero">
+                <label for="idTrianguloEquilatero">Triangulo Equilátero</label>
+            </div>
+              
+            <div class="clDivCampoDigitação">
+            <!-- Digitar o primeiro número -->
+                <label for="idNum1" id="idLabel1">Raio</label>
+                <input type="number" id="idNum1">
+            </div>    
+            <div class="clDivCampoDigitação">
+            <!-- Digitar o segundo número -->
+                <label for="idNum2" id="idLabel2">Altura</label>
+                <input type="number" id="idNum2">
+            </div>
+            <div>
+            <!-- Calcular Area -->
+                <input type="button" value="Calcular" id="idCalcularArea">
+            </div>  
+            <div>
+            <!-- Saída - out -->
+                <output id="idOut"></output>
+            </div>
+        </form>
+    </body>
+</html>
