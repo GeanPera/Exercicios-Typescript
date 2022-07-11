@@ -29,6 +29,7 @@ export class Pessoa{
     }
 
     setDataDeNascimento():string {
-        return this.diaNascimento + "/" + this.mesNascimento + "/" + this.anoNascimento
+        let dataNascimento = this.diaNascimento + "/" + this.mesNascimento + "/" + this.anoNascimento 
+        return dataNascimento
     }
 }

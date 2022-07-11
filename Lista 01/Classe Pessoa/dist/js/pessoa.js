@@ -20,7 +20,8 @@ class Pessoa {
         return this.nome;
     }
     setDataDeNascimento() {
-        return this.diaNascimento + "/" + this.mesNascimento + "/" + this.anoNascimento;
+        let dataNascimento = this.diaNascimento + "/" + this.mesNascimento + "/" + this.anoNascimento;
+        return dataNascimento;
     }
 }
 exports.Pessoa = Pessoa;
