@@ -13,8 +13,10 @@ class Endereco {
         this.complemento = complemento;
     }
     getEnderecoCompleto() {
-        let enderecoCompleto = `${this.bairro} - ${this.cidade}, ${this.uf} (${this.estado}) - Cep: ${this.cep} 
-Rua: ${this.rua}, Numero da residencia: ${this.numeroResidencia}, Complemento: ${this.complemento}.`;
+        let enderecoCompleto = `
+            ${this.bairro} - ${this.cidade}, ${this.uf} (${this.estado}) - Cep: ${this.cep} 
+            Rua: ${this.rua}, Numero da residencia: ${this.numeroResidencia}, Complemento: ${this.complemento}.
+        `;
         return enderecoCompleto;
     }
 }
