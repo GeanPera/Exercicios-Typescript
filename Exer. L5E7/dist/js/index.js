@@ -1,44 +1,49 @@
 "use strict";
-var btEnviar = document.getElementById("idBtEnviar");
-btEnviar.onclick = function () {
-    enviarIdade();
+var numSorteado = Number((Math.random() * 11).toFixed(0));
+var cont = 0;
+var numTentativa;
+var outMsn = document.getElementById("idOutMsn");
+var outAlerta = document.getElementById("idOutAlerta");
+var campoNum = document.getElementById("idNum");
+var botao = document.getElementById("idBtAdivinhar");
+var btAdivinhar = document.getElementById("idBtAdivinhar");
+btAdivinhar.onclick = function () {
+    validar();
 };
-var btVerificar = document.getElementById("idBtVerificar");
-btVerificar.onclick = function () {
-    imprimirStatus();
-};
-var contMedia = 0;
-var media = 0;
-var maior18 = 0;
-var menor5 = 0;
-var maiorIdade = 0;
-var outMedia = document.getElementById("idOutMedia");
-var outMaior18 = document.getElementById("idOutMaior18");
-var outMenor5 = document.getElementById("idOutMenor5");
-var outMaiorIdade = document.getElementById("idOutmaiorIdade");
-function enviarIdade() {
-    let pegarIdade = document.getElementById("idIdade");
-    let idade = parseFloat(pegarIdade.value);
-    if (idade > 18) {
-        maior18++;
+function validar() {
+    let pegarTentativa = document.getElementById("idNum");
+    numTentativa = parseInt(pegarTentativa.value);
+    if (numTentativa >= 0 && numTentativa <= 10) {
+        adivinhar();
     }
-    if (idade < 5) {
-        menor5++;
+    else {
+        outAlerta.value = "Chute um numero entre 0 e 10";
+        campoNum.value = "";
     }
-    if (idade > maiorIdade) {
-        maiorIdade = idade;
-    }
-    if (idade > 0) {
-        contMedia++;
-        media = media + idade;
-    }
-    pegarIdade.value = "";
 }
-function imprimirStatus() {
-    let idadeMedia = media / contMedia;
-    idadeMedia.toFixed(2);
-    outMedia.value = "Idade media: " + idadeMedia + " anos ";
-    outMaior18.value = "Quantidade de pessoas maiores de 18 anos : " + maior18;
-    outMenor5.value = "Quantidade de pessoas menores que 5 anos : " + menor5;
-    outMaiorIdade.value = " A maior idade digitada é " + maiorIdade + " anos";
+function adivinhar() {
+    if (numTentativa == numSorteado) {
+        outMsn.value = "Parabéns, Você acertou!";
+        campoNum.value = "";
+        campoNum.disabled = true;
+        botao.disabled = true;
+    }
+    if (numTentativa > numSorteado) {
+        outMsn.value = "Errado! O numero sorteado é menor que " + numTentativa;
+        campoNum.value = "";
+        cont++;
+    }
+    if (numTentativa < numSorteado) {
+        outMsn.value = "Errado! O numero sorteado é maior que " + numTentativa;
+        campoNum.value = "";
+        cont++;
+    }
+    if (cont == 3) {
+        campoNum.disabled = true;
+        botao.disabled = true;
+        outMsn.value = "";
+        outAlerta.value = "Você errou as 3 tentativas, mais sorte na proxima vez";
+        campoNum.value = "";
+    }
+    console.log("Sorteio = " + numSorteado + " Sua tentativa = " + numTentativa);
 }

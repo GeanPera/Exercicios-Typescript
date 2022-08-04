@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>javaP6L5 - TypeScript</title>
+        <title>JavaP7L5 - TypeScript</title>
         <style>
             body{
                 margin: 20px;
@@ -12,9 +12,13 @@
             div{
                 margin: 20px;
             }
-            output{
+            .clMsn{
                 display: block;
                 margin: 15px;
+            }
+            .clAlerta{
+                color: red;
+                display: block;
             }
         </style>
         <script src="js/index.js" defer></script>
@@ -22,18 +26,15 @@
     <body>
         <form action="">
             <div>
-                <label for="idIdade">Idade</label>
-                <input type="number" name="nmIdade" id="idIdade">
+                <label for="idNum">Qual o seu numero</label><br>
+                <input type="number" name="nmNum" id="idNum">     
+                <output class="clAlerta" id="idOutAlerta"></output> 
             </div>
             <div>
-                <button type="button" id="idBtEnviar">Enviar</button>
-                <button type="button" id="idBtVerificar">Verificar</button>
+                <input type="button" value="Adivinhar" id="idBtAdivinhar">
             </div>
             <div>
-                <output id="idOutMedia"></output>
-                <output id="idOutMaior18"></output>
-                <output id="idOutMenor5"></output>
-                <output id="idOutmaiorIdade"></output>
+                <output class="clMsn" id="idOutMsn"></output>
             </div>
         </form>
     </body>
