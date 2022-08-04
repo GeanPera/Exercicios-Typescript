@@ -1,11 +1,14 @@
 export class Pessoa{
-    idade:number;
-    diaNascimento:number;
-    mesNascimento:number;
-    anoNascimento:number;
-    nome:string;
 
-    constructor(idade:number, diaNascimento:number, mesNascimento:number,
+    // Atributos
+    private idade:number;
+    private diaNascimento:number;
+    private mesNascimento:number;
+    private anoNascimento:number;
+    private nome:string;
+
+    // Construtor
+    public constructor(idade:number, diaNascimento:number, mesNascimento:number,
         anoNascimento:number, nome:string) {
 
         this.idade = idade;
@@ -15,20 +18,22 @@ export class Pessoa{
         this.nome = nome;
 
     }
-    calcularIdade():void{
+
+    // Getters e Setters
+    public calcularIdade():void{
         const data = new Date()
         this.idade = data.getFullYear() - this.anoNascimento
     }
 
-    getIdade():number{
+    public getIdade():number{
         return this.idade
     }
 
-    getNome():string{
+    public getNome():string{
         return this.nome
     }
 
-    setDataDeNascimento():string {
+    public setDataDeNascimento():string {
         let dataNascimento = this.diaNascimento + "/" + this.mesNascimento + "/" + this.anoNascimento 
         return dataNascimento
     }
